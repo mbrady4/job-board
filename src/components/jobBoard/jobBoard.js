@@ -1,51 +1,53 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import JobListing from '../jobListing/jobListing.js';
 
 const JobBoard = (props) => {
+    const referenceJobs = require('../../data/data.json')
 
-    // const [jobs, setJobs] = useState()
+    const [jobs, setJobs] = useState(require('../../data/data.json'))
+    const [filters, addFilters] = useState([])
 
-    const jobs = data;
+    const addNewFilter = (filter) => {
+      const tempFilters = [...filters]
+      if (tempFilters.includes(filter) === false) {
+        tempFilters.push(filter);
+      }
+      addFilters(tempFilters);
+      console.log(filters);
+    };
+
+    const resetFilters = () => {
+      addFilters([])
+    };
+
+    useEffect( () => {
+      if (filters.length != 0) {
+        let activeJobs = []
+        for (let job = 0; job < referenceJobs.length; job++) {
+          for (let filter = 0; filter < filters.length; filter++) {
+            if ( referenceJobs[job].languages.includes(filter) || 
+                referenceJobs[job].tools.includes(filter) ||
+                referenceJobs[job].role == filter ||
+                referenceJobs[job].level == filter ) {
+                  activeJobs.push(referenceJobs[job])
+              }
+          }
+        }
+        setJobs(activeJobs);
+        console.log(jobs);
+      }
+    }, [filters]);
 
     console.log(jobs);
     return (
         <div>
-            {console.log(jobs)}
-            <JobListing job={data[0]} />
+          {jobs.map( (job, key) => {
+            return <JobListing job={job} 
+                               key={key} 
+                               addNewFilter={addNewFilter} />;
+          })}
         </div>
     )
 };
-
-const data = [
-    {
-      "id": 1,
-      "company": "Photosnap",
-      "logo": "./images/photosnap.svg",
-      "new": true,
-      "featured": true,
-      "position": "Senior Frontend Developer",
-      "role": "Frontend",
-      "level": "Senior",
-      "postedAt": "1d ago",
-      "contract": "Full Time",
-      "location": "USA Only",
-      "languages": ["HTML", "CSS", "JavaScript"]
-    },
-    {
-      "id": 2,
-      "company": "Manage",
-      "logo": "./images/manage.svg",
-      "new": true,
-      "featured": true,
-      "position": "Fullstack Developer",
-      "role": "Fullstack",
-      "level": "Midweight",
-      "postedAt": "1d ago",
-      "contract": "Part Time",
-      "location": "Remote",
-      "languages": ["Python"],
-      "tools": ["React"]
-    }
-]
 
 export default JobBoard;

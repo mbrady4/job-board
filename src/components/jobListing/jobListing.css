@@ -1,12 +1,20 @@
 .joblisting {
     display:flex;
-    justify-content: center;
+    justify-content: space-between;
     box-shadow: 0 15px 20px -5px rgba(13,113,130,0.15);
     border-radius: 5px;
     width:80%;
     margin-left:auto;
     margin-right:auto;
-    padding-top: 3rem;
+    /* padding-top: 3rem; */
+    padding: 3rem;
+}
+
+.job-info {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    width: 50%;
 }
 
 .joblisting img {
@@ -21,4 +29,9 @@
 .joblisting div .row {
     display:flex;
     flex-direction:row;
+}
+
+.job-filters {
+    display:flex;
+    justify-content:right;
 }
