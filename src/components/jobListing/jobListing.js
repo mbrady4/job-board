@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import './jobListing.css';
 
 let logos = {
@@ -15,7 +15,7 @@ let logos = {
 }
 
 const JobListing = (props) => {
-    const logoCode = logos[props.job.company]
+    const logoCode = logos[props.job.company];
 
     return (
         <div className='joblisting'>
@@ -38,13 +38,13 @@ const JobListing = (props) => {
                 </div>
             </div>
             <div className='job-filters'>
-                <button onClick={ () => props.addNewFilter(props.job.role)}>{props.job.role}</button>
-                <button onClick={ () => props.addNewFilter(props.job.level)}>{props.job.level}</button>
+                <button onClick={ () => props.roleFilter(props.job.role)}>{props.job.role}</button>
+                <button onClick={ () => props.levelFilter(props.job.level)}>{props.job.level}</button>
                 { props.job.tools ? props.job.tools.map( (tool, key) => {
-                    return <button onClick={ () => props.addNewFilter(tool)}>{tool}</button>;
+                    return <button onClick={ () => props.toolFilter(tool) } key={key}>{tool}</button>;
                 }) : null }
                 { props.job.languages ? props.job.languages.map( (language, key) => {
-                    return <button onClick={ () => props.addNewFilter(language)}>{language}</button>;
+                    return <button onClick={ () => props.languageFilter(language) } key={key}>{language}</button>;
                 }) : null }
             </div>
         </div>
