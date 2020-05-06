@@ -18,7 +18,7 @@ const JobListing = (props) => {
     const logoCode = logos[props.job.company];
 
     return (
-        <div className='joblisting'>
+        <div className={props.job.featured ? 'joblisting featuredlisting' : 'joblisting'}>
             <div className="job-info">
                 <div className='col'>
                     <img src={`${logoCode}`} alt=''/>

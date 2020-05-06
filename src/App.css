@@ -5,6 +5,8 @@
 .App-header {
   background-color: #5ca5a5;
   max-width: 100%;
+  position: relative;
+  z-index:1;
 }
 
 .App-header img {

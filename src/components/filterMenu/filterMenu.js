@@ -1,21 +1,29 @@
 import React from 'react';
+import './filterMenu.css';
 
 const FilterMenu = (props) => {
     return (
-        <div>
-            <div>
-                <h1>Active Filters</h1>
-                {props.filters.role.length > 0 ? <button onClick={ () => props.removeRole(props.filters.role) }>{props.filters.role}</button> : null}
-                {props.filters.level.length > 0 ? <button onClick={ () => props.removeLevel(props.filters.level) }>{props.filters.level}</button> : null}
+        <div className='filterContainer'>
+            <div className='filters'>
+                {props.filters.role.length > 0 ? <div onClick={ () => props.removeRole(props.filters.role) } className='closeContainer'>
+                                                 <button>{props.filters.role}</button>
+                                                 <span className='close'>X</span></div> : null}
+                {props.filters.level.length > 0 ? <div onClick={ () => props.removeLevel(props.filters.level) } className='closeContainer'>
+                                                  <button>{props.filters.level}</button>
+                                                  <span className='close'>X</span></div> : null}
                 {props.filters.tools.map( (tool, key) => {
-                    return <button onClick={ () => props.removeTool(tool) } key={key}>{tool}</button>
+                    return <div onClick={ () => props.removeTool(tool) } className='closeContainer'>
+                           <button key={key}>{tool}</button>
+                           <span className='close'>X</span></div>
                 })}
                 {props.filters.languages.map( (language, key) => {
-                    return <button onClick={ () => props.removeLanguage(language) } key={key}>{language}</button>
+                    return <div onClick={ () => props.removeLanguage(language) } className='closeContainer'>
+                           <button key={key}>{language}</button>
+                           <span className='close'>X</span></div>
                 })}
             </div>
             <div>
-                <button onClick={ () => props.resetFilters() }>Clear</button>
+                <button onClick={ () => props.resetFilters() } className='clear'>Clear</button>
             </div>
         </div>
     )

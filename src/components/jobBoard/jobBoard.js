@@ -137,7 +137,7 @@ const JobBoard = (props) => {
     console.log(filters);
     return (
         <div>
-          { (filters.role.length > 0 | filters.level > 0 |
+          { (filters.role.length > 0 | filters.level.length > 0 |
              filters.languages.length > 0 | filters.tools.length > 0) ?
             <FilterMenu filters={filters} 
                       removeLevel={removeLevel}
