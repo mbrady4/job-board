@@ -1,6 +1,7 @@
 .filterContainer {
     display:flex;
     justify-content: space-between;
+    align-items: center;
     box-shadow: 0 15px 20px -5px rgba(13,113,130,0.15);
     background-color: white;
     border-radius: 5px;
@@ -14,6 +15,13 @@
 
 .clear { 
     background: white;
+    font-size: 1.4rem;
+    color: #5CA5A5;
+    font-weight: bold;
+    letter-spacing: -0.1px;
+    line-height:1.4rem;
+    margin: 0 0.5rem;
+    border: none;
 }
 
 .clear:hover {
@@ -31,6 +39,20 @@
 
 .filters div {
     padding-right: 2rem;
+}
+
+.filters div button {
+    padding: 1rem;
+    background: #f0f7f7;
+    /* height: 2.5rem; */
+    border-radius: 4px;
+    font-size: 1.4rem;
+    color: #5CA5A5;
+    font-weight: bold;
+    letter-spacing: -0.1px;
+    line-height:1.4rem;
+    margin: 0 0.5rem;
+    border: none;
 }
 
 .filters div button:hover {
@@ -56,4 +78,21 @@
 .close:hover {
     background-color :#2B3939;
     cursor:pointer;
+}
+
+@media all and (max-width:900px) {
+    .filterContainer {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .filters {
+        max-width: 80%;
+        flex-wrap: wrap;
+    }
+
+    .filters div {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
 }

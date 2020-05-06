@@ -42,13 +42,13 @@ const JobListing = (props) => {
                 </div>
             </div>
             <div className='job-filters'>
-                <button onClick={ () => props.roleFilter(props.job.role)}>{props.job.role}</button>
-                <button onClick={ () => props.levelFilter(props.job.level)}>{props.job.level}</button>
+                <button className='jobfilter' onClick={ () => props.roleFilter(props.job.role)}>{props.job.role}</button>
+                <button className='jobfilter' onClick={ () => props.levelFilter(props.job.level)}>{props.job.level}</button>
                 { props.job.tools ? props.job.tools.map( (tool, key) => {
-                    return <button onClick={ () => props.toolFilter(tool) } key={key}>{tool}</button>;
+                    return <button className='jobfilter' onClick={ () => props.toolFilter(tool) } key={key}>{tool}</button>;
                 }) : null }
                 { props.job.languages ? props.job.languages.map( (language, key) => {
-                    return <button onClick={ () => props.languageFilter(language) } key={key}>{language}</button>;
+                    return <button className='jobfilter' onClick={ () => props.languageFilter(language) } key={key}>{language}</button>;
                 }) : null }
             </div>
         </div>
