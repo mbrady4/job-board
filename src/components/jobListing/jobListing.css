@@ -3,35 +3,97 @@
     justify-content: space-between;
     box-shadow: 0 15px 20px -5px rgba(13,113,130,0.15);
     border-radius: 5px;
-    width:80%;
-    margin-left:auto;
-    margin-right:auto;
-    /* padding-top: 3rem; */
-    padding: 3rem;
+    max-width: 960px;
+    padding: 2.5rem;
+    margin: 3rem auto;
+    border-left: 5px solid #5CA5A5;
 }
 
 .job-info {
     display:flex;
     flex-direction:row;
     flex-wrap: nowrap;
-    width: 50%;
+    align-items: center;
+    /* width: 50%; */
 }
 
 .joblisting img {
-    width: 200px;
+    width: 100px;
+    padding: 1rem;
 }
 
-.joblisting div {
-    display:flex;
-    flex-direction: column;
+h3 {
+    font-size: 1.8rem;
+    color: #5CA5A5;
+    letter-spacing: 0;
+    font-weight:bold;
 }
+
+h4 {
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    height:1.4rem;
+    margin-left: 10px;
+    border-radius: 13px;
+    font-weight:bold;
+}
+
+.new {
+    color: white;
+    background-color: #5CA5A5;
+}
+
+.featured {
+    color: white;
+    background-color: #2B3939;
+}
+
+h2 {
+    font-size: 2.0rem;
+    color: #2B3939;
+    letter-spacing: 0;
+    font-weight: bold;
+}
+
 
 .joblisting div .row {
     display:flex;
     flex-direction:row;
+    align-items: center;
+    padding: .75rem 0;
+}
+
+.row p {
+    font-size:1.6rem;
+    color: #7C8F8F;
+    letter-spacing: 0.5px;
+    font-weight: lighter;
+}
+
+.row span {
+    padding: 0 1rem;
+    font-size:3.0rem;
+    line-height:1.5rem;
+    color: #7C8F8F;
 }
 
 .job-filters {
     display:flex;
     justify-content:right;
+    align-items: center;
+}
+
+button {
+    padding: 1rem;
+    background: #f0f7f7;
+    /* height: 2.5rem; */
+    border-radius: 4px;
+    font-size: 1.4rem;
+    color: #5CA5A5;
+    font-weight: bold;
+    letter-spacing: -0.1px;
+    line-height:1.4rem;
+    margin: 0 0.5rem;
+    border: none;
 }

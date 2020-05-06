@@ -20,19 +20,23 @@ const JobListing = (props) => {
     return (
         <div className='joblisting'>
             <div className="job-info">
-                <img src={`${logoCode}`} alt=''/>
-                <div>
+                <div className='col'>
+                    <img src={`${logoCode}`} alt=''/>
+                </div>
+                <div className='col'>
                     <div className='row'>
                         <h3>{props.job.company}</h3>
-                        {props.job.new === true ? <h4>NEW!</h4> : null}
-                        {props.job.featured === true ? <h4>FEATURED</h4> : null}
+                        {props.job.new === true ? <h4 className='new'>NEW!</h4> : null}
+                        {props.job.featured === true ? <h4 className='featured'>FEATURED</h4> : null}
                     </div>
                     <div className='row'>
                         <h2>{props.job.position}</h2>
                     </div>
                     <div className='row'>
                         <p>{props.job.postedAt}</p>
+                        <span>&#183;</span>
                         <p>{props.job.contract}</p>
+                        <span>&#183;</span>
                         <p>{props.job.location}</p>
                     </div>
                 </div>
