@@ -2,7 +2,7 @@
   {
     "id": 1,
     "company": "Jeff Bezo's Insights on Business",
-    "logo": "./images/manage.svg",
+    "logo": "./images/inventandwander.png",
     "download": "https://diviguide-layouts.s3.amazonaws.com/InventAndWanderCards.csv",
     "new": true,
     "featured": false,
@@ -12,6 +12,68 @@
     "postedAt": "17 cards",
     "contract": "Book",
     "location": "Jan. 2021",
-    "languages": ["Business Strategy", "Entrepreneurship", "Platform Economics", "Creativity", "Leadership"]
+    "languages": [
+      "Business Strategy",
+      "Entrepreneurship",
+      "Platform Economics",
+      "Creativity",
+      "Leadership"
+    ]
+  },
+  {
+    "id": 2,
+    "company": "Morgan Housel on Investing",
+    "logo": "./images/PsychologyOfMoney.png",
+    "download": "https://diviguide-layouts.s3.amazonaws.com/PyscologyOfMoneyCards.csv",
+    "new": true,
+    "featured": false,
+    "position": "The Psychology of Money",
+    "role": "People",
+    "level": "Books",
+    "postedAt": "20 cards",
+    "contract": "Book",
+    "location": "Feb. 2021",
+    "languages": [
+      "Investing",
+      "Mindset",
+      "Behavioral Economics",
+      "Decision Making"
+    ]
+  },
+  {
+    "id": 3,
+    "company": "An introduction to the cell",
+    "logo": "./images/TheMachineryOfLife.png",
+    "download": "https://diviguide-layouts.s3.amazonaws.com/TheMachineryOfLifeCards.csv",
+    "new": false,
+    "featured": false,
+    "position": "The Machinery of Life",
+    "role": "People",
+    "level": "Books",
+    "postedAt": "30 cards",
+    "contract": "Book",
+    "location": "Jan. 2021",
+    "languages": ["Cells", "Biology", "Life Sciences", "Systems Design"]
+  },
+  {
+    "id": 4,
+    "company": "Computer science meets cell biology",
+    "logo": "./images/AComputerScientistsGuideToCellBiology.png",
+    "download": "https://diviguide-layouts.s3.amazonaws.com/ComputerScientistsGuideToCellBiology.csv",
+    "new": true,
+    "featured": false,
+    "position": "A Computer Scientist's Guide to Cell Biology",
+    "role": "People",
+    "level": "Books",
+    "postedAt": "26 cards",
+    "contract": "Book",
+    "location": "Feb. 2021",
+    "languages": [
+      "Cells",
+      "Biology",
+      "Life Sciences",
+      "Computer Science",
+      "Systems Thinking"
+    ]
   }
 ]
