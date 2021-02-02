@@ -6,6 +6,8 @@ let logos = {
   "The Psychology of Money": require("../../images/PsychologyOfMoney.png"),
   "The Machinery of Life": require("../../images/TheMachineryOfLife.png"),
   "A Computer Scientist's Guide to Cell Biology": require("../../images/AComputersScientistsGuideToCellBiology.png"),
+  "Tape Sucks": require("../../images/TapeSucks.png"),
+  "Molecular Biology of the Cell - Part 1": require("../../images/MolecularBiologyOfTheCell.png"),
 };
 
 const JobListing = (props) => {

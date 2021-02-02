@@ -75,5 +75,35 @@
       "Computer Science",
       "Systems Thinking"
     ]
+  },
+  {
+    "id": 5,
+    "company": "Frank Slootman on building businesses",
+    "logo": "./images/TapeSucks.png",
+    "download": "https://diviguide-layouts.s3.amazonaws.com/TapeSucksCards.csv",
+    "new": false,
+    "featured": false,
+    "position": "Tape Sucks",
+    "role": "People",
+    "level": "Books",
+    "postedAt": "21 cards",
+    "contract": "Book",
+    "location": "Feb. 2021",
+    "languages": ["SaaS", "Leadership", "Entrepreneurship", "Sales", "Culture"]
+  },
+  {
+    "id": 6,
+    "company": "Computer science meets cell biology",
+    "logo": "./images/MolecularBiologyOfTheCell.png",
+    "download": "https://diviguide-layouts.s3.amazonaws.com/MolecularBiologyOfTheCellPart1Cards.csv",
+    "new": true,
+    "featured": false,
+    "position": "Molecular Biology of the Cell - Part 1",
+    "role": "People",
+    "level": "Books",
+    "postedAt": "59 cards",
+    "contract": "Book",
+    "location": "Feb. 2021",
+    "languages": ["Cells", "Biology", "Life Sciences"]
   }
 ]
