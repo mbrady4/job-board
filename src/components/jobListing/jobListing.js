@@ -8,6 +8,10 @@ let logos = {
   "A Computer Scientist's Guide to Cell Biology": require("../../images/AComputersScientistsGuideToCellBiology.png"),
   "Tape Sucks": require("../../images/TapeSucks.png"),
   "Molecular Biology of the Cell - Part 1": require("../../images/MolecularBiologyOfTheCell.png"),
+  "The Slight Edge": require("../../images/TheSlightEdge.jpg"),
+  "Zero To One": require("../../images/ZeroToOne.jpg"),
+  "Never Eat Alone": require("../../images/NeverEatAlone.jpg"),
+  Smartcuts: require("../../images/Smartcuts.jpg"),
 };
 
 const JobListing = (props) => {
